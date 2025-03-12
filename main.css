@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #282c34;
+}
+
+.container {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.animated-button {
+    padding: 15px 30px;
+    font-size: 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(270deg, #ff0080, #ff8c00, #00bfff, #8000ff, #ff0080);
+    background-size: 400% 400%;
+    animation: gradient-animation 5s ease infinite;
+    outline: none;
+    transition: transform 0.3s;
+}
+
+.animated-button:hover {
+    transform: scale(1.05);
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
